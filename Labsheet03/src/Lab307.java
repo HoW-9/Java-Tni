@@ -1,0 +1,21 @@
+import javax.swing.*;
+
+public class Lab307 {
+    public static void main(String[] args) {
+        double total = 0;
+        double price;
+        while (true) {
+            price = Double.parseDouble(JOptionPane.showInputDialog("Input price [press 0 to stop]:"));
+
+            if (price < 0){
+             price = Double.parseDouble(JOptionPane.showInputDialog("Invalid price!!" +
+                        "\nInput price [press 0 to stop]:"));
+            }
+            if (price == 0){
+                break;}
+            total += price;
+        }
+        JOptionPane.showMessageDialog(null,"Total price is " + total + " baht.");
+
+    }
+}
