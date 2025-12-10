@@ -5,15 +5,27 @@ public class Lab405 {
         Scanner scan = new Scanner(System.in);
         String sentence;
 
-        while (true){
-            System.out.print("In put some sentence: ");
+        while (true) {
+            System.out.print("Input some sentence: ");
             sentence = scan.nextLine();
-            if (!sentence.endsWith(".")){
-                System.out.print("Then sentence must end with full stop point: ");
-                String answer = scan.nextLine();
-            }else _{
-                break;
+
+            if (!sentence.endsWith(".")) {
+
+                while (true) {
+                    System.out.print("The sentence must end with full stop point: ");
+                    sentence = scan.nextLine();
+
+                    if (sentence.endsWith(".")) {
+                        break;
+                    }
+                }
             }
+            break;
         }
+        sentence = sentence.substring(0, sentence.length() - 1);
+        for (String word : sentence.split(" ")) {
+            System.out.println(word);
+        }
+        scan.close();
     }
 }
