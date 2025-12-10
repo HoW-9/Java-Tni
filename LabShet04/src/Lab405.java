@@ -22,7 +22,7 @@ public class Lab405 {
             }
             break;
         }
-        sentence = sentence.substring(0, sentence.length() - 1);
+        sentence = sentence.substring(0,sentence.length() - 1);
         for (String word : sentence.split(" ")) {
             System.out.println(word);
         }
