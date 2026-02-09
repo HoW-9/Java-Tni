@@ -4,8 +4,8 @@ public class Saimai extends Bakery{
         super(flavor,unitPrice);
         this.pack = pack;
     }
-    public void promotion(){
-        if (this.pack == 5)System.out.println(" Get free 1 ");
+    public String storageAdvice(){
+        return "Keep in airtight container, avoid humidity.";
     }
     @Override
     public int getPackingcost() {
